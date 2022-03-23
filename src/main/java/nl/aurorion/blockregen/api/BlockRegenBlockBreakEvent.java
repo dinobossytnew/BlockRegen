@@ -7,16 +7,18 @@ import org.bukkit.event.Cancellable;
 import org.bukkit.event.block.BlockBreakEvent;
 
 /**
- * Fired after the original BlockBreakEvent.
- * Cancelling this event causes BlockRegen not to do any action after the block is broken. It does not cancel BlockBreakEvent itself.
+ * Se modifico el evento extendido a este plugin en la api clase evento 1 
+ * Se modifico el problema de rendimiento que causa fallos y otros problemas
  */
 public class BlockRegenBlockBreakEvent extends BlockRegenBlockEvent implements Cancellable {
 
     /**
-     * Original BLockBreakEvent which caused BlockRegen to take action.
+     * block break del retraso causado.
      */
     @Getter
     private final BlockBreakEvent blockBreakEvent;
+    
+    
 
     @Getter
     @Setter
